@@ -1,0 +1,31 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: rgb(0, 250, 205);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.super-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(5, 19, 23);
+}
+
+.wrapper {
+  height: 90%;
+  width: 40%;
+  border: 3px solid rgb(0, 250, 205);
+  padding: 5rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

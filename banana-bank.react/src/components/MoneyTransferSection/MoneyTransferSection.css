@@ -1,0 +1,68 @@
+.transfer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+input {
+  font-size: 2rem;
+  padding: 1.5rem 3rem;
+  text-align: center;
+  background: rgb(5, 19, 23);
+  color: white;
+  border: 1px solid white;
+}
+
+button {
+  font-size: 2rem;
+  padding: 1rem 2.5rem;
+  border-radius: 10px;
+  background: rgb(5, 19, 23);
+  color: white;
+  border: 1px solid rgb(0, 250, 205);
+}
+
+button:nth-of-type(1) {
+  background: rgb(18, 123, 18);
+}
+
+button:nth-of-type(2) {
+  background: rgb(183, 58, 58);
+}
+
+article {
+  text-align: center;
+  height: 25vw;
+  width: 100%;
+  overflow: scroll;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.time {
+  font-size: 1.6rem;
+  margin-top: -5px;
+}
+
+.win {
+  color: rgb(18, 123, 18);
+  font-size: 2.5rem;
+}
+
+.lose {
+  color: rgb(183, 58, 58);
+  font-size: 2.5rem;
+}
+
+.history {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
