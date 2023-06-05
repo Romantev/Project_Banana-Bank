@@ -9,23 +9,31 @@ const MoneyTransferSection = (props) => {
   function addMoney() {
     props.budget(props.actualbudget + parseFloat(inputVal));
     const addHistory = parseFloat(inputVal);
-    document.querySelector("article").innerHTML +=
-      addHistory != 0
-        ? `<div class="history"><p class="win">+ ${addHistory.toFixed(
-            2
-          )} €</p><p class="time"> am ${date} um ${time}</p></div>`
-        : "";
+    document
+      .querySelector("article")
+      .insertAdjacentHTML(
+        "afterbegin",
+        addHistory != 0
+          ? `<div class="history"><p class="win">+ ${addHistory.toFixed(
+              2
+            )} €</p><p class="time"> am ${date} um ${time}</p></div>`
+          : ""
+      );
   }
 
   function removeMoney() {
     props.budget(props.actualbudget - parseFloat(inputVal));
     const addHistory = parseFloat(inputVal);
-    document.querySelector("article").innerHTML +=
-      addHistory != 0
-        ? `<div class="history"><p class="lose">- ${addHistory.toFixed(
-            2
-          )} €</p><p class="time"> am ${date} um ${time}</p></div>`
-        : "";
+    document
+      .querySelector("article")
+      .insertAdjacentHTML(
+        "afterbegin",
+        addHistory != 0
+          ? `<div class="history"><p class="lose">- ${addHistory.toFixed(
+              2
+            )} €</p><p class="time"> am ${date} um ${time}</p></div>`
+          : ""
+      );
   }
 
   return (

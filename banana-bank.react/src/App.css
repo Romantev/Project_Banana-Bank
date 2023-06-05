@@ -22,7 +22,7 @@ html {
   height: 90%;
   width: 40%;
   border: 3px solid rgb(0, 250, 205);
-  padding: 5rem;
+  padding: 3rem;
   border-radius: 20px;
   display: flex;
   flex-direction: column;

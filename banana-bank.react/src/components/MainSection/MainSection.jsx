@@ -1,6 +1,6 @@
 import "./MainSection.css";
 import AccountBudgetSection from "../AccountBudgetSection/AccountBudgetSection";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const MainSection = () => {
   const [headerDis, setHeaderDis] = useState("flex");
@@ -12,6 +12,14 @@ const MainSection = () => {
     setMainDis("flex");
     setHeaderDis("none");
   }
+
+  useEffect(() => {
+    window.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        setDisplay();
+      }
+    });
+  });
 
   return (
     <div className="wrapper">
@@ -31,7 +39,7 @@ const MainSection = () => {
             setStartCap(parseInt(parseFloat(e.target.value).toFixed(2)))
           }
         />
-        <button onClick={setDisplay}>Starten!</button>
+        <button onClick={setDisplay}>Starten</button>
       </header>
 
       <main style={{ display: mainDis }}>
